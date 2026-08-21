@@ -11,11 +11,10 @@
   .bloco { width: 100%; }
   .bloco .frame { position: relative; width: 100%; line-height: 0; }
   .bloco img { display: block; width: 100%; height: auto; }
-  #hero { background: linear-gradient(to bottom, #ffffff 0%, #ffffff 88%, #00b6bd 88%, #00b6bd 100%); }
   #mais-que-classificacao { background: #48aeb3; }
   #mais-informacoes { background: #fcbb15; }
   @media (min-width: 768px) {
-    .bloco .frame { width: 88%; max-width: 1680px; margin: 0 auto; }
+    .bloco:not(#hero) .frame { width: 88%; max-width: 1680px; margin: 0 auto; }
   }
   .cta-link {
     position: absolute;
