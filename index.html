@@ -73,7 +73,7 @@
   }
 
   /* pixel-stepped corners, reused on buttons, cards and windows */
-  .btn, .card, .faq-card {
+  .btn, .card, .card-inner, .faq-card {
     clip-path: polygon(
       0 20px, 5px 20px, 5px 15px, 10px 15px, 10px 10px, 15px 10px, 15px 5px, 20px 5px, 20px 0,
       calc(100% - 20px) 0, calc(100% - 15px) 0, calc(100% - 15px) 5px, calc(100% - 10px) 5px, calc(100% - 10px) 10px, calc(100% - 5px) 10px, calc(100% - 5px) 15px, 100% 15px, 100% 20px,
@@ -217,9 +217,13 @@
     gap: 24px;
   }
   .card {
+    background: var(--card-color, var(--ink));
+    padding: 3px;
+  }
+  .card-inner {
     background: #fff;
-    border: 3px solid var(--card-color, var(--ink));
     padding: 28px 22px;
+    height: 100%;
   }
   .card-icon {
     width: 44px;
@@ -464,40 +468,48 @@
     <h2>COMO OS DADOS PODEM AJUDAR SUA ESCOLA?</h2>
     <div class="cards-grid">
       <div class="card c-1">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="14" r="6"/><circle cx="10" cy="20" r="4"/><circle cx="38" cy="20" r="4"/><path d="M14 34c0-6 4-10 10-10s10 4 10 10M4 36c0-4 3-7 6-7M44 36c0-4-3-7-6-7"/></svg>
-        <h3>COORDENAÇÃO</h3>
-        <ul>
-          <li>Planejar ações pedagógicas</li>
-          <li>Identificar prioridades de ensino</li>
-          <li>Acompanhar evolução</li>
-        </ul>
+        <div class="card-inner">
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="14" r="6"/><circle cx="10" cy="20" r="4"/><circle cx="38" cy="20" r="4"/><path d="M14 34c0-6 4-10 10-10s10 4 10 10M4 36c0-4 3-7 6-7M44 36c0-4-3-7-6-7"/></svg>
+          <h3>COORDENAÇÃO</h3>
+          <ul>
+            <li>Planejar ações pedagógicas</li>
+            <li>Identificar prioridades de ensino</li>
+            <li>Acompanhar evolução</li>
+          </ul>
+        </div>
       </div>
       <div class="card c-2">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="10" width="16" height="12" rx="1"/><circle cx="32" cy="14" r="5"/><path d="M14 22v6M4 40c0-6 4-10 10-10s10 4 10 10M24 40c0-5 4-9 8-9s8 4 8 9"/></svg>
-        <h3>DIREÇÃO</h3>
-        <ul>
-          <li>Direcionar ações de desenvolvimento</li>
-          <li>Promover uma cultura eficaz de dados na escola</li>
-          <li>Incentivar o sucesso escolar</li>
-        </ul>
+        <div class="card-inner">
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="10" width="16" height="12" rx="1"/><circle cx="32" cy="14" r="5"/><path d="M14 22v6M4 40c0-6 4-10 10-10s10 4 10 10M24 40c0-5 4-9 8-9s8 4 8 9"/></svg>
+          <h3>DIREÇÃO</h3>
+          <ul>
+            <li>Direcionar ações de desenvolvimento</li>
+            <li>Promover uma cultura eficaz de dados na escola</li>
+            <li>Incentivar o sucesso escolar</li>
+          </ul>
+        </div>
       </div>
       <div class="card c-3">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="16" cy="12" r="6"/><path d="M6 34c0-6 4-10 10-10s10 4 10 10"/><rect x="26" y="8" width="18" height="12" rx="1"/><path d="M30 26h10"/></svg>
-        <h3>PROFESSORES</h3>
-        <ul>
-          <li>Compreender dificuldades</li>
-          <li>Planejar intervenções</li>
-          <li>Trabalhar habilidades específicas</li>
-        </ul>
+        <div class="card-inner">
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="16" cy="12" r="6"/><path d="M6 34c0-6 4-10 10-10s10 4 10 10"/><rect x="26" y="8" width="18" height="12" rx="1"/><path d="M30 26h10"/></svg>
+          <h3>PROFESSORES</h3>
+          <ul>
+            <li>Compreender dificuldades</li>
+            <li>Planejar intervenções</li>
+            <li>Trabalhar habilidades específicas</li>
+          </ul>
+        </div>
       </div>
       <div class="card c-4">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 42V18l16-10 16 10v24"/><path d="M8 42h32M18 42V28h12v14M24 4v4M20 6h8"/></svg>
-        <h3>ESCOLA</h3>
-        <ul>
-          <li>Fortalecer os índices educacionais</li>
-          <li>Promover um desempenho de destaque para os estudantes</li>
-          <li>Tornar-se referência em Pensamento Computacional</li>
-        </ul>
+        <div class="card-inner">
+          <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 42V18l16-10 16 10v24"/><path d="M8 42h32M18 42V28h12v14M24 4v4M20 6h8"/></svg>
+          <h3>ESCOLA</h3>
+          <ul>
+            <li>Fortalecer os índices educacionais</li>
+            <li>Promover um desempenho de destaque para os estudantes</li>
+            <li>Tornar-se referência em Pensamento Computacional</li>
+          </ul>
+        </div>
       </div>
     </div>
     <p class="closing-line">
