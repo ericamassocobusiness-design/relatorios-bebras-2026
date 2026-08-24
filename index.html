@@ -113,7 +113,7 @@
   }
   .hero .wrap {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: 0.87fr 1fr;
     gap: 32px;
     align-items: start;
   }
@@ -151,25 +151,41 @@
   }
   .band-teal .wrap {
     display: grid;
-    grid-template-columns: 1fr 0.85fr;
+    grid-template-columns: 0.8fr 1fr;
     gap: 40px;
-    align-items: start;
   }
   .band-teal h2 { color: #fff; text-align: center; grid-column: 1 / -1; }
   .band-teal h2 .accent { color: var(--yellow); }
   .band-teal p { color: #fff; max-width: 56ch; }
-  .band-teal p + p { margin-top: 18px; }
+  .band-teal .intro p + p { margin-top: 18px; }
   .band-teal .tagline {
     font-family: var(--font-display);
     color: var(--yellow);
     font-size: clamp(0.85rem, 1.6vw, 1.05rem);
     line-height: 1.9;
-    margin-top: 40px;
   }
-  .band-teal .col-text { display: flex; flex-direction: column; }
-  .band-teal .col-media { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-  .mascot-cube { width: min(220px, 70%); }
-  .classification-mockup { border: 3px solid rgba(255,255,255,0.4); }
+  .band-teal .col-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    height: 100%;
+  }
+  .band-teal .col-media {
+    position: relative;
+    min-height: 320px;
+  }
+  .classification-mockup {
+    width: 74%;
+    margin-left: auto;
+    border: 3px solid rgba(255,255,255,0.4);
+  }
+  .mascot-cube {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 38%;
+  }
 
   /* ---------- section 3: o que mostra ---------- */
   .section { padding: 72px 0; }
@@ -394,8 +410,10 @@
   <div class="wrap">
     <h2><span class="accent">MUITO MAIS</span> DO QUE UMA CLASSIFICAÇÃO</h2>
     <div class="col-text">
-      <p>O Bebras reúne <strong>uma das maiores</strong> bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira.</p>
-      <p>Os Relatórios organizam esses dados para <strong>revelar pontos fortes, oportunidades de desenvolvimento</strong> e <strong>diferenças entre níveis e grupos de estudantes</strong>.</p>
+      <div class="intro">
+        <p>O Bebras reúne <strong>uma das maiores</strong> bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira.</p>
+        <p>Os Relatórios organizam esses dados para <strong>revelar pontos fortes, oportunidades de desenvolvimento</strong> e <strong>diferenças entre níveis e grupos de estudantes</strong>.</p>
+      </div>
       <p class="tagline">A OLIMPÍADA TERMINA.<br>OS DADOS CONTINUAM<br>APOIANDO A APRENDIZAGEM.</p>
     </div>
     <div class="col-media">
