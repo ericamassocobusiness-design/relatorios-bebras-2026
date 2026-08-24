@@ -117,14 +117,16 @@
     gap: 32px;
     align-items: center;
   }
+  .hero .text { min-width: 0; }
   .hero h1 {
     color: var(--ink);
+    font-size: clamp(1.4rem, 3.4vw, 2.5rem);
   }
   .hero h1 .accent { color: var(--teal); display: block; }
   .hero .kicker {
     font-family: var(--font-display);
     color: var(--teal);
-    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    font-size: clamp(0.85rem, 1.8vw, 1.15rem);
     margin-top: 28px;
   }
   .hero .lede {
