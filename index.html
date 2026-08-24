@@ -283,27 +283,52 @@
 
   /* ---------- section 7: faq ---------- */
   .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 28px;
   }
   .faq-card {
     border: 3px solid var(--ink);
     background: #fff;
+    flex: 1 1 320px;
+    max-width: 380px;
   }
   .faq-bar {
     background: var(--faq-color, var(--teal));
     padding: 10px 14px;
     display: flex;
     justify-content: flex-end;
-    gap: 6px;
+    align-items: center;
+    gap: 8px;
     border-bottom: 3px solid var(--ink);
   }
-  .faq-bar span {
+  .faq-bar .ico-restore {
     width: 10px; height: 10px;
-    background: var(--ink);
+    border: 2px solid var(--ink);
     display: inline-block;
   }
+  .faq-bar .ico-minimize {
+    width: 10px; height: 2px;
+    background: var(--ink);
+    display: inline-block;
+    align-self: flex-end;
+    margin-bottom: 1px;
+  }
+  .faq-bar .ico-close {
+    width: 12px; height: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  .faq-bar .ico-close::before, .faq-bar .ico-close::after {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 13px; height: 2px;
+    background: var(--ink);
+  }
+  .faq-bar .ico-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+  .faq-bar .ico-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
   .faq-body { padding: 22px 20px; }
   .faq-body h3 { font-size: 1rem; font-family: var(--font-body); font-weight: 800; margin-bottom: 12px; }
   .faq-body p { font-size: 0.95rem; }
@@ -332,7 +357,6 @@
     .band-yellow .media { order: -1; }
     .practical .wrap { grid-template-columns: 1fr; }
     .practical .media { order: -1; }
-    .faq-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (max-width: 560px) {
@@ -341,7 +365,6 @@
     .feature-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .cards-grid { grid-template-columns: 1fr; }
-    .faq-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -514,35 +537,35 @@
     <h2>TIRE SUAS DÚVIDAS</h2>
     <div class="faq-grid">
       <div class="faq-card q1">
-        <div class="faq-bar"><span></span><span></span><span></span></div>
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
         <div class="faq-body">
           <h3>É necessário aplicar outra avaliação?</h3>
           <p><em>Não.</em> Os dados são gerados pela própria participação dos estudantes na Olimpíada Bebras.</p>
         </div>
       </div>
       <div class="faq-card q2">
-        <div class="faq-bar"><span></span><span></span><span></span></div>
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
         <div class="faq-body">
           <h3>Os Relatórios são gerados pelo Bebras Experience?</h3>
           <p><em>Não.</em> Eles são produzidos a partir dos resultados da participação da escola na Olimpíada Bebras.</p>
         </div>
       </div>
       <div class="faq-card q3">
-        <div class="faq-bar"><span></span><span></span><span></span></div>
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
         <div class="faq-body">
           <h3>A comparação considera todas as escolas brasileiras?</h3>
           <p>A comparação considera o conjunto nacional de escolas e estudantes participantes da Olimpíada Bebras.</p>
         </div>
       </div>
       <div class="faq-card q4">
-        <div class="faq-bar"><span></span><span></span><span></span></div>
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
         <div class="faq-body">
           <h3>Os Relatórios substituem as avaliações da escola?</h3>
           <p><em>Não.</em> Eles complementam as avaliações existentes com uma leitura específica sobre habilidades de Pensamento Computacional.</p>
         </div>
       </div>
       <div class="faq-card q5">
-        <div class="faq-bar"><span></span><span></span><span></span></div>
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
         <div class="faq-body">
           <h3>Os Relatórios apresentam resultados individuais?</h3>
           <p>O Relatório Geral da Escola apresenta uma visão consolidada dos participantes, organizada por níveis, habilidades, dificuldades e faixas de pontuação.</p>
