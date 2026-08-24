@@ -25,6 +25,7 @@
     --orange: #f39918;
     --ink: #1c1c1c;
     --paper: #ffffff;
+    --grid-line: rgba(28, 28, 28, 0.06);
     --font-display: 'Press Start 2P', 'Courier New', monospace;
     --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
   }
@@ -49,6 +50,24 @@
     margin: 0 auto;
     padding: 0 24px;
   }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .pixel-mark {
+    position: absolute;
+    width: 76px;
+    height: 57px;
+    fill: var(--pink);
+  }
+  .pixel-mark.top-left { top: 32px; left: 0; }
+  .pixel-mark.bottom-right { bottom: 32px; right: 0; }
+  .pixel-mark.bottom-left { bottom: 32px; left: 0; }
+  #o-que-mostra, #como-ajuda, #caminho-pratico, #duvidas { position: relative; }
 
   h1, h2, h3 {
     font-family: var(--font-display);
@@ -411,7 +430,17 @@
   </div>
 </section>
 
-<section class="section" id="o-que-mostra">
+<section class="section grid-bg" id="o-que-mostra">
+  <svg class="pixel-mark bottom-right" viewBox="0 0 4 3" aria-hidden="true">
+    <rect x="0.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="0.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="2.08" width="0.84" height="0.84"/>
+  </svg>
   <div class="wrap">
     <h2>O QUE OS RELATÓRIOS DE DESEMPENHO MOSTRAM?</h2>
 
@@ -463,7 +492,17 @@
   </div>
 </section>
 
-<section class="section" id="como-ajuda">
+<section class="section grid-bg" id="como-ajuda">
+  <svg class="pixel-mark top-left" viewBox="0 0 4 3" aria-hidden="true">
+    <rect x="0.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="0.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="2.08" width="0.84" height="0.84"/>
+  </svg>
   <div class="wrap">
     <h2>COMO OS DADOS PODEM AJUDAR SUA ESCOLA?</h2>
     <div class="cards-grid">
@@ -533,7 +572,17 @@
   </div>
 </section>
 
-<section class="section practical" id="caminho-pratico">
+<section class="section practical grid-bg" id="caminho-pratico">
+  <svg class="pixel-mark bottom-left" viewBox="0 0 4 3" aria-hidden="true">
+    <rect x="0.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="0.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="2.08" width="0.84" height="0.84"/>
+  </svg>
   <div class="wrap">
     <div class="text">
       <h2>UM CAMINHO PRÁTICO PARA COMEÇAR A <span class="accent">IMPLEMENTAR A</span> COMPUTAÇÃO NA ESCOLA</h2>
@@ -547,7 +596,17 @@
   </div>
 </section>
 
-<section class="section" id="duvidas">
+<section class="section grid-bg" id="duvidas">
+  <svg class="pixel-mark bottom-right" viewBox="0 0 4 3" aria-hidden="true">
+    <rect x="0.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="0.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="2.08" y="1.08" width="0.84" height="0.84"/>
+    <rect x="0.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="1.08" y="2.08" width="0.84" height="0.84"/>
+    <rect x="3.08" y="2.08" width="0.84" height="0.84"/>
+  </svg>
   <div class="wrap">
     <h2>TIRE SUAS DÚVIDAS</h2>
     <div class="faq-grid">
