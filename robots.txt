@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://relatorio.bebrasbrasil.com.br/sitemap.xml
