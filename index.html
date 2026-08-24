@@ -25,8 +25,6 @@
     --orange: #f39918;
     --ink: #1c1c1c;
     --paper: #ffffff;
-    --grid-line: rgba(28, 28, 28, 0.06);
-    --notch: 10px;
     --font-display: 'Press Start 2P', 'Courier New', monospace;
     --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
   }
@@ -50,13 +48,6 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
-  }
-
-  .grid-bg {
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 32px 32px;
   }
 
   h1, h2, h3 {
@@ -381,7 +372,7 @@
 </head>
 <body>
 
-<header class="hero grid-bg">
+<header class="hero">
   <div class="wrap">
     <div class="text">
       <h1>
@@ -416,7 +407,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="o-que-mostra">
+<section class="section" id="o-que-mostra">
   <div class="wrap">
     <h2>O QUE OS RELATÓRIOS DE DESEMPENHO MOSTRAM?</h2>
 
@@ -468,7 +459,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="como-ajuda">
+<section class="section" id="como-ajuda">
   <div class="wrap">
     <h2>COMO OS DADOS PODEM AJUDAR SUA ESCOLA?</h2>
     <div class="cards-grid">
@@ -530,7 +521,7 @@
   </div>
 </section>
 
-<section class="section practical grid-bg" id="caminho-pratico">
+<section class="section practical" id="caminho-pratico">
   <div class="wrap">
     <div class="text">
       <h2>UM CAMINHO PRÁTICO PARA COMEÇAR A <span class="accent">IMPLEMENTAR A</span> COMPUTAÇÃO NA ESCOLA</h2>
@@ -544,7 +535,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="duvidas">
+<section class="section" id="duvidas">
   <div class="wrap">
     <h2>TIRE SUAS DÚVIDAS</h2>
     <div class="faq-grid">
