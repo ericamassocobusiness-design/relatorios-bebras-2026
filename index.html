@@ -108,10 +108,18 @@
     white-space: nowrap;
     border: 0;
   }
+  .hero-media { position: relative; }
   .hero-full {
     display: block;
     width: 100%;
     height: auto;
+  }
+  .hero-cta {
+    position: absolute;
+    left: 9.6%;
+    top: 65.6%;
+    width: 25%;
+    height: 11.3%;
   }
 
   /* ---------- sections 2-7: image sections ---------- */
@@ -134,7 +142,10 @@
 
 <header class="hero">
   <h1 class="visually-hidden">Relatórios de Desempenho Bebras 2026 — Resultados que viram decisões pedagógicas</h1>
-  <img class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
+  <div class="hero-media">
+    <img class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
+    <a class="hero-cta" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type" aria-label="Inscreva sua escola na Olimpíada Bebras"></a>
+  </div>
 </header>
 
 <section class="img-section" id="mais-que-classificacao">
