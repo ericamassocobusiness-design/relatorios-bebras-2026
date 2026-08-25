@@ -25,7 +25,6 @@
     --orange: #f39918;
     --ink: #1c1c1c;
     --paper: #ffffff;
-    --grid-line: rgba(28, 28, 28, 0.06);
     --font-display: 'Press Start 2P', 'Courier New', monospace;
     --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
   }
@@ -49,13 +48,6 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
-  }
-
-  .grid-bg {
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 32px 32px;
   }
 
   .pixel-mark {
@@ -145,11 +137,17 @@
   }
   .hero .btn { margin-top: 26px; }
   .hero .media img { width: 100%; height: auto; display: block; }
+  .hero .hero-wave-outer {
+    background: var(--teal-bright);
+    margin-top: 40px;
+  }
   .hero .hero-wave-row {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
     display: grid;
     grid-template-columns: 0.755fr 1fr;
     gap: 0;
-    margin-top: 40px;
   }
   .hero-wave {
     width: 100%;
@@ -415,9 +413,11 @@
       <img class="hero-illustration" src="assets/hero-illustration.png" alt="Capa do Relatório de Desempenho da Escola e mascote do Bebras apresentando gráficos de acertos por habilidade">
     </div>
   </div>
-  <div class="wrap hero-wave-row">
-    <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
-    <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
+  <div class="hero-wave-outer">
+    <div class="hero-wave-row">
+      <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
+      <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
+    </div>
   </div>
   <div class="hero-footer"></div>
 </header>
@@ -438,7 +438,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="o-que-mostra">
+<section class="section" id="o-que-mostra">
   <img class="pixel-mark bottom-right" src="assets/icon-pixel-mark.png" alt="" aria-hidden="true">
   <div class="wrap">
     <h2>O QUE OS RELATÓRIOS DE DESEMPENHO MOSTRAM?</h2>
@@ -491,7 +491,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="como-ajuda">
+<section class="section" id="como-ajuda">
   <img class="pixel-mark top-left" src="assets/icon-pixel-mark.png" alt="" aria-hidden="true">
   <div class="wrap">
     <h2>COMO OS DADOS PODEM AJUDAR SUA ESCOLA?</h2>
@@ -562,7 +562,7 @@
   </div>
 </section>
 
-<section class="section practical grid-bg" id="caminho-pratico">
+<section class="section practical" id="caminho-pratico">
   <img class="pixel-mark bottom-left" src="assets/icon-pixel-mark.png" alt="" aria-hidden="true">
   <div class="wrap">
     <div class="text">
@@ -577,7 +577,7 @@
   </div>
 </section>
 
-<section class="section grid-bg" id="duvidas">
+<section class="section" id="duvidas">
   <img class="pixel-mark bottom-right" src="assets/icon-pixel-mark.png" alt="" aria-hidden="true">
   <div class="wrap">
     <h2>TIRE SUAS DÚVIDAS</h2>
