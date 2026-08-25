@@ -124,22 +124,9 @@
     display: grid;
     grid-template-columns: 0.755fr 1fr;
     gap: 32px;
-    align-items: stretch;
+    align-items: start;
   }
-  .hero .text {
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .hero .media {
-    display: flex;
-    flex-direction: column;
-  }
-  .hero .text .hero-wave,
-  .hero .media .hero-wave {
-    margin-top: auto;
-    padding-top: 40px;
-  }
+  .hero .text { min-width: 0; }
   .hero h1 {
     color: var(--ink);
     font-size: clamp(1.2rem, 2.7vw, 2.1rem);
@@ -158,6 +145,12 @@
   }
   .hero .btn { margin-top: 26px; }
   .hero .media img { width: 100%; height: auto; display: block; }
+  .hero .hero-wave-row {
+    display: grid;
+    grid-template-columns: 0.755fr 1fr;
+    gap: 0;
+    margin-top: 40px;
+  }
   .hero-wave {
     width: 100%;
     height: auto;
@@ -220,8 +213,8 @@
   .skills {
     margin-top: 64px;
   }
-  .skills h3 { color: var(--purple); margin-bottom: 6px; }
-  .skills .skills-lede { font-weight: 700; margin-bottom: 28px; }
+  .skills h3 { color: var(--purple); margin-bottom: 6px; text-align: center; }
+  .skills .skills-lede { font-weight: 700; margin-bottom: 28px; text-align: center; }
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -277,7 +270,8 @@
 
   .closing-line {
     text-align: center;
-    margin-top: 56px;
+    margin: 56px auto 0;
+    max-width: 62ch;
     font-size: clamp(1rem, 2vw, 1.2rem);
   }
   .closing-line .strong { font-weight: 800; }
@@ -416,12 +410,14 @@
       <p class="kicker">RESULTADOS QUE VIRAM DECISÕES PEDAGÓGICAS</p>
       <p class="lede">Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras.</p>
       <a class="btn" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
-      <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
     </div>
     <div class="media">
       <img class="hero-illustration" src="assets/hero-illustration.png" alt="Capa do Relatório de Desempenho da Escola e mascote do Bebras apresentando gráficos de acertos por habilidade">
-      <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
     </div>
+  </div>
+  <div class="wrap hero-wave-row">
+    <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
+    <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
   </div>
   <div class="hero-footer"></div>
 </header>
