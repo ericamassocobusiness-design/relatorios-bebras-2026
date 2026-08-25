@@ -122,14 +122,27 @@
   }
   .hero .wrap {
     display: grid;
-    grid-template-columns: 0.87fr 1fr;
+    grid-template-columns: 0.755fr 1fr;
     gap: 32px;
-    align-items: start;
+    align-items: stretch;
   }
-  .hero .text { min-width: 0; }
+  .hero .text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .media {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .text .hero-wave,
+  .hero .media .hero-wave {
+    margin-top: auto;
+    padding-top: 40px;
+  }
   .hero h1 {
     color: var(--ink);
-    font-size: clamp(1.4rem, 3.4vw, 2.5rem);
+    font-size: clamp(1.2rem, 2.7vw, 2.1rem);
   }
   .hero h1 .accent { color: var(--teal); display: block; }
   .hero .kicker {
@@ -145,12 +158,10 @@
   }
   .hero .btn { margin-top: 26px; }
   .hero .media img { width: 100%; height: auto; display: block; }
-  .hero-footer {
-    height: 56px;
-    margin-top: 40px;
-    background-color: var(--teal);
-    background-image: radial-gradient(rgba(255, 255, 255, 0.55) 1.5px, transparent 1.5px);
-    background-size: 10px 10px;
+  .hero-wave {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* ---------- section 2: muito mais ---------- */
@@ -405,9 +416,11 @@
       <p class="kicker">RESULTADOS QUE VIRAM DECISÕES PEDAGÓGICAS</p>
       <p class="lede">Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras.</p>
       <a class="btn" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
+      <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
     </div>
     <div class="media">
       <img class="hero-illustration" src="assets/hero-illustration.png" alt="Capa do Relatório de Desempenho da Escola e mascote do Bebras apresentando gráficos de acertos por habilidade">
+      <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
     </div>
   </div>
   <div class="hero-footer"></div>
