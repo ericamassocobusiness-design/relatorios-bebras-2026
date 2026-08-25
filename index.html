@@ -83,7 +83,7 @@
   }
 
   /* pixel-stepped corners, reused on buttons, cards and windows */
-  .btn, .card, .card-inner, .faq-card, .hero .kicker {
+  .btn, .card, .card-inner, .faq-card {
     clip-path: polygon(
       0 20px, 5px 20px, 5px 15px, 10px 15px, 10px 10px, 15px 10px, 15px 5px, 20px 5px, 20px 0,
       calc(100% - 20px) 0, calc(100% - 15px) 0, calc(100% - 15px) 5px, calc(100% - 10px) 5px, calc(100% - 10px) 10px, calc(100% - 5px) 10px, calc(100% - 5px) 15px, 100% 15px, 100% 20px,
@@ -109,69 +109,19 @@
   .btn:active { transform: translate(7px, 7px); box-shadow: 0 0 0 var(--ink); }
 
   /* ---------- header / hero ---------- */
-  .hero {
-    padding: 56px 0 0;
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 0.755fr 1fr;
-    gap: 0;
-    align-items: start;
-  }
-  .hero .text { min-width: 0; padding-right: 32px; }
-  .hero h1 {
-    color: var(--ink);
-    font-size: clamp(1.2rem, 2.7vw, 2.1rem);
-  }
-  .hero h1 .accent { color: var(--teal); display: block; }
-  .hero .kicker {
-    display: inline-block;
-    font-family: var(--font-body);
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 1.5;
-    color: var(--ink);
-    background: var(--yellow);
-    border: 3px solid var(--ink);
-    padding: 14px 22px;
-    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
-    margin-top: 28px;
-  }
-  .hero .lede {
-    font-size: clamp(1rem, 1.6vw, 1.15rem);
-    font-weight: 700;
-    text-align: center;
-    margin-top: 22px;
-  }
-  .hero .cta-link {
+  .hero-full {
     display: block;
-    text-align: center;
-    font-family: var(--font-body);
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--teal);
-    text-decoration: none;
-    line-height: 1.4;
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
-    margin-top: 26px;
-  }
-  .hero .media img { width: 100%; height: auto; display: block; }
-  .hero .hero-wave-outer {
-    background: var(--teal-bright);
-    margin-top: 0;
-  }
-  .hero .hero-wave-row {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: 0.755fr 1fr;
-    gap: 0;
-  }
-  .hero-wave {
     width: 100%;
     height: auto;
-    display: block;
   }
 
   /* ---------- section 2: muito mais ---------- */
@@ -392,9 +342,6 @@
   }
 
   @media (max-width: 900px) {
-    .hero .wrap { grid-template-columns: 1fr; }
-    .hero .text { padding-right: 0; }
-    .hero .media { order: -1; }
     .band-teal .wrap { grid-template-columns: 1fr; }
     .band-teal h2 { text-align: left; }
     .feature-grid { grid-template-columns: repeat(2, 1fr); }
@@ -418,28 +365,8 @@
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="text">
-      <h1>
-        RELATÓRIOS
-        <span class="accent">DE DESEMPENHO</span>
-        <span class="accent">BEBRAS 2026</span>
-      </h1>
-      <p class="kicker">TRANSFORME OS RESULTADOS DA<br>OLIMPÍADA BEBRAS EM DECISÕES<br>PEDAGÓGICAS PARA SUA ESCOLA</p>
-      <p class="lede">Ao participar do Bebras, sua escola recebe Relatórios de Desempenho que mostram como os estudantes estão desenvolvendo habilidades de Pensamento Computacional e ajudam a equipe a planejar os próximos passos.</p>
-      <a class="cta-link" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
-    </div>
-    <div class="media">
-      <img class="hero-illustration" src="assets/hero-illustration.png" alt="Capa do Relatório de Desempenho da Escola e mascote do Bebras apresentando gráficos de acertos por habilidade">
-    </div>
-  </div>
-  <div class="hero-wave-outer">
-    <div class="hero-wave-row">
-      <img class="hero-wave" src="assets/hero-wave-left.png" alt="">
-      <img class="hero-wave" src="assets/hero-wave-right.png" alt="">
-    </div>
-  </div>
-  <div class="hero-footer"></div>
+  <h1 class="visually-hidden">Relatórios de Desempenho Bebras 2026 — Resultados que viram decisões pedagógicas</h1>
+  <img class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
 </header>
 
 <section class="band-teal" id="mais-que-classificacao">
