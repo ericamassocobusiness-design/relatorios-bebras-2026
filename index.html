@@ -83,7 +83,7 @@
   }
 
   /* pixel-stepped corners, reused on buttons, cards and windows */
-  .btn, .card, .card-inner, .faq-card {
+  .btn, .card, .card-inner, .faq-card, .hero .kicker {
     clip-path: polygon(
       0 20px, 5px 20px, 5px 15px, 10px 15px, 10px 10px, 15px 10px, 15px 5px, 20px 5px, 20px 0,
       calc(100% - 20px) 0, calc(100% - 15px) 0, calc(100% - 15px) 5px, calc(100% - 10px) 5px, calc(100% - 10px) 10px, calc(100% - 5px) 10px, calc(100% - 5px) 15px, 100% 15px, 100% 20px,
@@ -125,17 +125,36 @@
   }
   .hero h1 .accent { color: var(--teal); display: block; }
   .hero .kicker {
-    font-family: var(--font-display);
-    color: var(--teal);
-    font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    padding: 14px 22px;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
     margin-top: 28px;
   }
   .hero .lede {
     font-size: clamp(1rem, 1.6vw, 1.15rem);
     font-weight: 700;
-    margin-top: 14px;
+    text-align: center;
+    margin-top: 22px;
   }
-  .hero .btn { margin-top: 26px; }
+  .hero .cta-link {
+    display: block;
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--teal);
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    margin-top: 26px;
+  }
   .hero .media img { width: 100%; height: auto; display: block; }
   .hero .hero-wave-outer {
     background: var(--teal-bright);
@@ -406,9 +425,9 @@
         <span class="accent">DE DESEMPENHO</span>
         <span class="accent">BEBRAS 2026</span>
       </h1>
-      <p class="kicker">RESULTADOS QUE VIRAM DECISÕES PEDAGÓGICAS</p>
-      <p class="lede">Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras.</p>
-      <a class="btn" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
+      <p class="kicker">TRANSFORME OS RESULTADOS DA<br>OLIMPÍADA BEBRAS EM DECISÕES<br>PEDAGÓGICAS PARA SUA ESCOLA</p>
+      <p class="lede">Ao participar do Bebras, sua escola recebe Relatórios de Desempenho que mostram como os estudantes estão desenvolvendo habilidades de Pensamento Computacional e ajudam a equipe a planejar os próximos passos.</p>
+      <a class="cta-link" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
     </div>
     <div class="media">
       <img class="hero-illustration" src="assets/hero-illustration.png" alt="Capa do Relatório de Desempenho da Escola e mascote do Bebras apresentando gráficos de acertos por habilidade">
