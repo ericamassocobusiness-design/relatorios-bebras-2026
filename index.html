@@ -115,10 +115,10 @@
   .hero .wrap {
     display: grid;
     grid-template-columns: 0.755fr 1fr;
-    gap: 32px;
+    gap: 0;
     align-items: start;
   }
-  .hero .text { min-width: 0; }
+  .hero .text { min-width: 0; padding-right: 32px; }
   .hero h1 {
     color: var(--ink);
     font-size: clamp(1.2rem, 2.7vw, 2.1rem);
@@ -374,6 +374,7 @@
 
   @media (max-width: 900px) {
     .hero .wrap { grid-template-columns: 1fr; }
+    .hero .text { padding-right: 0; }
     .hero .media { order: -1; }
     .band-teal .wrap { grid-template-columns: 1fr; }
     .band-teal h2 { text-align: left; }
