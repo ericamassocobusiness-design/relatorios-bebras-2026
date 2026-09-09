@@ -56,7 +56,6 @@
     text-wrap: balance;
   }
 
-  h1 { font-size: clamp(1.7rem, 4.2vw, 3rem); }
   h2 { font-size: clamp(1.3rem, 3vw, 2.1rem); }
   h3 { font-size: clamp(1rem, 1.6vw, 1.05rem); }
 
@@ -66,14 +65,8 @@
 
   a { color: inherit; }
 
-  .eyebrow {
-    font-family: var(--font-display);
-    font-size: 0.7rem;
-    letter-spacing: 0.04em;
-  }
-
   /* pixel-stepped corners, reused on buttons, cards and windows */
-  .btn, .card, .card-inner, .faq-card {
+  .btn, .card, .card-inner, .faq-card, .hero-mobile .kicker {
     clip-path: polygon(
       0 20px, 5px 20px, 5px 15px, 10px 15px, 10px 10px, 15px 10px, 15px 5px, 20px 5px, 20px 0,
       calc(100% - 20px) 0, calc(100% - 15px) 0, calc(100% - 15px) 5px, calc(100% - 10px) 5px, calc(100% - 10px) 10px, calc(100% - 5px) 10px, calc(100% - 5px) 15px, 100% 15px, 100% 20px,
@@ -93,21 +86,12 @@
     padding: 16px 28px;
     box-shadow: 7px 7px 0 var(--ink);
     text-decoration: none;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
   }
-  .btn:hover { transform: translate(2px, 2px); box-shadow: 5px 5px 0 var(--ink); }
-  .btn:active { transform: translate(7px, 7px); box-shadow: 0 0 0 var(--ink); }
 
-  /* ---------- header / hero ---------- */
-  .visually-hidden {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
+  /* ---------- desktop image sections (>820px) ---------- */
+  .desktop-only { display: block; }
+  .mobile-only { display: none; }
+
   .hero-media { position: relative; }
   .hero-full {
     display: block;
@@ -124,13 +108,163 @@
     min-height: 44px;
   }
 
-  /* ---------- sections 2-7: image sections ---------- */
-  .img-section { padding: 0; }
+  .img-section.desktop-only { padding: 0; }
   .section-image {
     display: block;
     width: 100%;
     height: auto;
   }
+
+  /* ---------- mobile text sections (<=820px) ---------- */
+  .hero-mobile { padding: 40px 0 32px; text-align: center; }
+  .hero-mobile h1 {
+    font-family: var(--font-display);
+    line-height: 1.4;
+    color: var(--ink);
+    font-size: clamp(1.5rem, 7vw, 2.1rem);
+  }
+  .hero-mobile h1 .accent { color: var(--teal); display: block; }
+  .hero-mobile .kicker {
+    display: inline-block;
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    margin-top: 24px;
+  }
+  .hero-mobile .lede {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 20px auto 0;
+  }
+  .hero-mobile .cta-link {
+    display: block;
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--teal);
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    margin-top: 22px;
+  }
+  .hero-mobile .hero-illustration-mobile {
+    width: min(320px, 100%);
+    margin: 32px auto 0;
+  }
+
+  .band-teal-mobile { background: var(--teal); color: #fff; padding: 48px 0; text-align: center; }
+  .band-teal-mobile h2 { color: #fff; }
+  .band-teal-mobile h2 .accent { color: var(--yellow); }
+  .band-teal-mobile p { color: #fff; margin: 16px auto 0; font-size: 1.02rem; }
+  .band-teal-mobile .tagline {
+    font-family: var(--font-display);
+    color: var(--yellow);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-top: 28px;
+  }
+  .band-teal-mobile img { width: min(320px, 100%); margin: 32px auto 0; }
+
+  .section-mobile { padding: 48px 0; }
+  .section-mobile h2 { color: var(--teal); text-align: center; margin-bottom: 32px; }
+
+  .feature-list-mobile { display: flex; flex-direction: column; gap: 24px; }
+  .feature h3 { margin-bottom: 8px; }
+  .feature p { font-size: 0.98rem; }
+  .feature.c-orange h3 { color: var(--yellow); }
+  .feature.c-pink h3 { color: var(--pink); }
+  .feature.c-blue h3 { color: var(--blue); }
+  .feature.c-green h3 { color: var(--green); }
+
+  .skills-mobile { margin-top: 40px; }
+  .skills-mobile h3 { color: var(--purple); margin-bottom: 6px; text-align: center; }
+  .skills-mobile .skills-lede { font-weight: 700; margin-bottom: 24px; text-align: center; }
+  .skills-grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .skill-icon { width: 48px; height: 48px; margin: 0 auto 10px; }
+  .skill-label { font-weight: 800; font-size: 0.82rem; text-transform: uppercase; }
+
+  .cards-list-mobile { display: flex; flex-direction: column; gap: 20px; }
+  .card { background: var(--card-color, var(--ink)); padding: 3px; }
+  .card-inner { background: #fff; padding: 24px 20px; }
+  .card-icon { width: 40px; height: 40px; margin-bottom: 14px; }
+  .card h3 { color: var(--card-color, var(--ink)); margin-bottom: 12px; }
+  .card ul { display: flex; flex-direction: column; gap: 8px; font-size: 0.95rem; }
+  .card li { position: relative; padding-left: 18px; }
+  .card li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.5em;
+    width: 7px; height: 7px;
+    background: var(--card-color, var(--ink));
+  }
+  .card.c-1 { --card-color: var(--yellow); }
+  .card.c-2 { --card-color: var(--pink); }
+  .card.c-3 { --card-color: var(--blue); }
+  .card.c-4 { --card-color: var(--green); }
+
+  .closing-line-mobile {
+    text-align: center;
+    margin: 40px auto 0;
+    font-size: 1.05rem;
+  }
+  .closing-line-mobile .strong { font-weight: 800; display: block; }
+  .closing-line-mobile .accent { color: var(--teal); font-weight: 800; display: block; margin-top: 6px; }
+
+  .band-yellow-mobile { background: var(--yellow); padding: 48px 0; text-align: center; }
+  .band-yellow-mobile h2 .line1 { color: var(--ink); display: block; }
+  .band-yellow-mobile h2 .line2 { color: #fff; display: block; margin-top: 6px; }
+  .band-yellow-mobile p { color: var(--ink); margin: 16px auto 0; }
+  .band-yellow-mobile img { width: min(260px, 100%); margin: 28px auto 0; }
+
+  .practical-mobile h2 { text-align: center; color: var(--teal); margin-bottom: 20px; }
+  .practical-mobile h2 .accent { color: var(--pink); }
+  .practical-mobile p { margin: 0 auto 16px; text-align: center; }
+  .practical-mobile .b-mundo { color: var(--blue); font-weight: 800; }
+  .practical-mobile .b-cultura { color: var(--green); font-weight: 800; }
+  .practical-mobile .b-pensamento { color: var(--orange); font-weight: 800; }
+  .practical-mobile .b-bebras { font-weight: 800; }
+  .practical-mobile img { width: min(280px, 100%); margin: 24px auto 0; }
+
+  .faq-list-mobile { display: flex; flex-direction: column; gap: 20px; }
+  .faq-card { border: 3px solid var(--ink); background: #fff; }
+  .faq-bar {
+    background: var(--faq-color, var(--teal));
+    padding: 10px 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid var(--ink);
+  }
+  .faq-bar .ico-restore { width: 10px; height: 10px; border: 2px solid var(--ink); display: inline-block; }
+  .faq-bar .ico-minimize { width: 10px; height: 2px; background: var(--ink); display: inline-block; align-self: flex-end; margin-bottom: 1px; }
+  .faq-bar .ico-close { width: 12px; height: 10px; position: relative; display: inline-block; }
+  .faq-bar .ico-close::before, .faq-bar .ico-close::after {
+    content: ""; position: absolute; top: 50%; left: 50%; width: 13px; height: 2px; background: var(--ink);
+  }
+  .faq-bar .ico-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+  .faq-bar .ico-close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+  .faq-body { padding: 18px 18px; }
+  .faq-body h3 { font-size: 1rem; font-family: var(--font-body); font-weight: 800; margin-bottom: 10px; }
+  .faq-body p { font-size: 0.95rem; }
+  .faq-card.q1 { --faq-color: var(--green); }
+  .faq-card.q2 { --faq-color: var(--teal); }
+  .faq-card.q3 { --faq-color: var(--pink); }
+  .faq-card.q4 { --faq-color: var(--orange); }
+  .faq-card.q5 { --faq-color: var(--blue); }
 
   footer {
     padding: 40px 24px 56px;
@@ -138,40 +272,230 @@
     font-size: 0.85rem;
     color: #666;
   }
+
+  @media (max-width: 820px) {
+    .desktop-only { display: none; }
+    .mobile-only { display: block; }
+  }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <h1 class="visually-hidden">Relatórios de Desempenho Bebras 2026 — Resultados que viram decisões pedagógicas</h1>
-  <div class="hero-media">
+  <div class="hero-media desktop-only">
     <img class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
     <a class="hero-cta" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type" aria-label="Inscreva sua escola na Olimpíada Bebras"></a>
   </div>
+  <div class="hero-mobile mobile-only">
+    <div class="wrap">
+      <h1>
+        RELATÓRIOS
+        <span class="accent">DE DESEMPENHO</span>
+        <span class="accent">BEBRAS 2026</span>
+      </h1>
+      <p class="kicker">TRANSFORME OS RESULTADOS DA<br>OLIMPÍADA BEBRAS EM DECISÕES<br>PEDAGÓGICAS PARA SUA ESCOLA</p>
+      <p class="lede">Ao participar do Bebras, sua escola recebe Relatórios de Desempenho que mostram como os estudantes estão desenvolvendo habilidades de Pensamento Computacional e ajudam a equipe a planejar os próximos passos.</p>
+      <a class="cta-link" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
+      <img class="hero-illustration-mobile" src="assets/hero-illustration.png" alt="Mascote do Bebras apresentando gráficos de acertos por habilidade">
+    </div>
+  </div>
 </header>
 
-<section class="img-section" id="mais-que-classificacao">
+<section class="img-section desktop-only" id="mais-que-classificacao">
   <img class="section-image" src="assets/section-2.png" alt="Muito mais do que uma classificação. O Bebras reúne uma das maiores bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira. Os Relatórios organizam esses dados para revelar pontos fortes, oportunidades de desenvolvimento e diferenças entre níveis e grupos de estudantes. A Olimpíada termina, os dados continuam apoiando a aprendizagem.">
 </section>
+<section class="band-teal-mobile mobile-only">
+  <div class="wrap">
+    <h2><span class="accent">MUITO MAIS</span> DO QUE UMA CLASSIFICAÇÃO</h2>
+    <p>O Bebras reúne <strong>uma das maiores</strong> bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira.</p>
+    <p>Os Relatórios organizam esses dados para <strong>revelar pontos fortes, oportunidades de desenvolvimento</strong> e <strong>diferenças entre níveis e grupos de estudantes</strong>.</p>
+    <p class="tagline">A OLIMPÍADA TERMINA.<br>OS DADOS CONTINUAM<br>APOIANDO A APRENDIZAGEM.</p>
+    <img src="assets/classification-mockup.png" alt="Mascote do Bebras segurando um cubo mágico ao lado de prints do Relatório de desempenho da escola">
+  </div>
+</section>
 
-<section class="img-section" id="o-que-mostra">
+<section class="img-section desktop-only" id="o-que-mostra">
   <img class="section-image" src="assets/section-3.png" alt="O que os Relatórios de Desempenho mostram? Comparação nacional, desempenho por nível, faixas de pontuação, desempenho por dificuldade. Análise das cinco habilidades: decomposição, abstração, reconhecimento de padrões, pensamento algorítmico e avaliação.">
 </section>
+<section class="section-mobile mobile-only">
+  <div class="wrap">
+    <h2>O QUE OS RELATÓRIOS DE DESEMPENHO MOSTRAM?</h2>
+    <div class="feature-list-mobile">
+      <div class="feature c-orange">
+        <h3>COMPARAÇÃO NACIONAL</h3>
+        <p><strong>Compara</strong> os resultados da escola com o conjunto de participantes da Olimpíada Bebras em todo o Brasil.</p>
+      </div>
+      <div class="feature c-pink">
+        <h3>DESEMPENHO POR NÍVEL</h3>
+        <p><strong>Organiza</strong> os indicadores de acordo com as diferentes etapas da Educação Básica.</p>
+      </div>
+      <div class="feature c-blue">
+        <h3>FAIXAS DE PONTUAÇÃO</h3>
+        <p><strong>Mostra</strong> a distribuição dos estudantes por faixas de desempenho, oferecendo uma visão mais completa do grupo.</p>
+      </div>
+      <div class="feature c-green">
+        <h3>DESEMPENHO POR DIFICULDADE</h3>
+        <p><strong>Mostra</strong> como os estudantes responderam às questões fáceis, médias e difíceis.</p>
+      </div>
+    </div>
+    <div class="skills-mobile">
+      <h3>ANÁLISE DAS CINCO HABILIDADES</h3>
+      <p class="skills-lede">Apresenta o desempenho em:</p>
+      <div class="skills-grid-mobile">
+        <div class="skill">
+          <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="var(--teal)" stroke-width="2.4"><rect x="14" y="6" width="20" height="8" rx="1"/><path d="M24 14v8M24 22H10M24 22h14M10 22v8M38 22v8"/><rect x="4" y="30" width="12" height="8" rx="1"/><rect x="32" y="30" width="12" height="8" rx="1"/></svg>
+          <p class="skill-label">Decomposição</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="var(--orange)" stroke-width="2.4"><path d="M24 4 6 14v20l18 10 18-10V14z"/><path d="M24 24 6 14M24 24l18-10M24 24v20"/><rect x="32" y="20" width="10" height="10"/></svg>
+          <p class="skill-label">Abstração</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="var(--green)" stroke-width="2.4"><rect x="4" y="8" width="8" height="8"/><rect x="16" y="8" width="8" height="8"/><rect x="4" y="20" width="8" height="8"/><rect x="16" y="20" width="8" height="8"/><rect x="32" y="14" width="12" height="20" rx="1"/></svg>
+          <p class="skill-label">Reconhecimento de padrões</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="var(--pink)" stroke-width="2.4"><rect x="4" y="4" width="14" height="10" rx="1"/><rect x="4" y="34" width="14" height="10" rx="1"/><path d="M24 24 12 14M24 24 12 34"/><circle cx="24" cy="24" r="4"/><path d="M28 24h16"/></svg>
+          <p class="skill-label">Pensamento algorítmico</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="var(--purple)" stroke-width="2.4"><rect x="6" y="4" width="24" height="30" rx="1"/><path d="M12 12h12M12 18h12M12 24h6"/><circle cx="32" cy="32" r="9"/><path d="m38.5 38.5 5.5 5.5"/></svg>
+          <p class="skill-label">Avaliação</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="img-section" id="como-ajuda">
+<section class="img-section desktop-only" id="como-ajuda">
   <img class="section-image" src="assets/section-4.png" alt="Como os dados podem ajudar sua escola? Coordenação, Direção, Professores e Escola. Dos resultados às ações: informações claras para apoiar toda a equipe escolar.">
 </section>
+<section class="section-mobile mobile-only">
+  <div class="wrap">
+    <h2>COMO OS DADOS PODEM AJUDAR SUA ESCOLA?</h2>
+    <div class="cards-list-mobile">
+      <div class="card c-1">
+        <div class="card-inner">
+          <img class="card-icon" src="assets/icon-coordenacao.png" alt="" width="40" height="40">
+          <h3>COORDENAÇÃO</h3>
+          <ul>
+            <li>Planejar ações pedagógicas</li>
+            <li>Identificar prioridades de ensino</li>
+            <li>Acompanhar evolução</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card c-2">
+        <div class="card-inner">
+          <img class="card-icon" src="assets/icon-direcao.png" alt="" width="40" height="40">
+          <h3>DIREÇÃO</h3>
+          <ul>
+            <li>Direcionar ações de desenvolvimento</li>
+            <li>Promover uma cultura eficaz de dados na escola</li>
+            <li>Incentivar o sucesso escolar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card c-3">
+        <div class="card-inner">
+          <img class="card-icon" src="assets/icon-professores.png" alt="" width="40" height="40">
+          <h3>PROFESSORES</h3>
+          <ul>
+            <li>Compreender dificuldades</li>
+            <li>Planejar intervenções</li>
+            <li>Trabalhar habilidades específicas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card c-4">
+        <div class="card-inner">
+          <img class="card-icon" src="assets/icon-escola.png" alt="" width="40" height="40">
+          <h3>ESCOLA</h3>
+          <ul>
+            <li>Fortalecer os índices educacionais</li>
+            <li>Promover um desempenho de destaque para os estudantes</li>
+            <li>Tornar-se referência em Pensamento Computacional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="closing-line-mobile">
+      <span class="strong">DOS RESULTADOS ÀS AÇÕES:</span>
+      <span class="accent">INFORMAÇÕES CLARAS PARA APOIAR TODA A EQUIPE ESCOLAR.</span>
+    </p>
+  </div>
+</section>
 
-<section class="img-section" id="mais-informacoes">
+<section class="img-section desktop-only" id="mais-informacoes">
   <img class="section-image" src="assets/section-5.png" alt="Mais informações sem aplicar outra prova. Os indicadores são gerados pela própria participação dos estudantes na Olimpíada Bebras. Os Relatórios não substituem as avaliações da escola. Eles complementam as informações existentes com uma análise específica das habilidades de Pensamento Computacional.">
 </section>
-
-<section class="img-section" id="caminho-pratico">
-  <img class="section-image" src="assets/section-6.png" alt="Um caminho prático para começar a implementar a Computação na escola. A Computação na Educação Básica está organizada em três eixos: Mundo Digital, Cultura Digital e Pensamento Computacional. A Olimpíada Bebras atua diretamente no eixo de Pensamento Computacional.">
+<section class="band-yellow-mobile mobile-only">
+  <div class="wrap">
+    <h2><span class="line1">MAIS INFORMAÇÕES</span><span class="line2">SEM APLICAR OUTRA PROVA</span></h2>
+    <p>Os indicadores são gerados pela própria participação dos estudantes na Olimpíada Bebras.</p>
+    <p><strong>Os Relatórios não substituem as avaliações da escola.</strong></p>
+    <p>Eles complementam as informações existentes com uma análise específica das habilidades de Pensamento Computacional.</p>
+    <img src="assets/mascot-info.png" alt="Mascote do Bebras vestindo suéter azul">
+  </div>
 </section>
 
-<section class="img-section" id="duvidas">
+<section class="img-section desktop-only" id="caminho-pratico">
+  <img class="section-image" src="assets/section-6.png" alt="Um caminho prático para começar a implementar a Computação na escola. A Computação na Educação Básica está organizada em três eixos: Mundo Digital, Cultura Digital e Pensamento Computacional. A Olimpíada Bebras atua diretamente no eixo de Pensamento Computacional.">
+</section>
+<section class="section-mobile practical-mobile mobile-only">
+  <div class="wrap">
+    <h2>UM CAMINHO PRÁTICO PARA COMEÇAR A <span class="accent">IMPLEMENTAR A</span> COMPUTAÇÃO NA ESCOLA</h2>
+    <p>A Computação na Educação Básica está organizada em três eixos: <span class="b-mundo">Mundo Digital</span>, <span class="b-cultura">Cultura Digital</span> e <span class="b-pensamento">Pensamento Computacional</span>.</p>
+    <p>A <span class="b-bebras">Olimpíada Bebras</span> atua diretamente no eixo de <strong>Pensamento Computacional</strong>, desenvolvendo habilidades como: avaliação, abstração, decomposição, pensamento algorítmico e reconhecimento de padrões.</p>
+    <p>Capacidades que apoiam a compreensão e a aplicação dos demais conhecimentos da Computação.</p>
+    <img src="assets/piechart.png" alt="Diagrama circular com os três eixos da Computação: Mundo Digital, Cultura Digital e Pensamento Computacional">
+  </div>
+</section>
+
+<section class="img-section desktop-only" id="duvidas">
   <img class="section-image" src="assets/section-7.png" alt="Tire suas dúvidas. É necessário aplicar outra avaliação? Não. Os Relatórios são gerados pelo Bebras Experience? Não. A comparação considera todas as escolas brasileiras? Os Relatórios substituem as avaliações da escola? Não. Os Relatórios apresentam resultados individuais?">
+</section>
+<section class="section-mobile mobile-only">
+  <div class="wrap">
+    <h2>TIRE SUAS DÚVIDAS</h2>
+    <div class="faq-list-mobile">
+      <div class="faq-card q1">
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
+        <div class="faq-body">
+          <h3>É necessário aplicar outra avaliação?</h3>
+          <p><em>Não.</em> Os dados são gerados pela própria participação dos estudantes na Olimpíada Bebras.</p>
+        </div>
+      </div>
+      <div class="faq-card q2">
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
+        <div class="faq-body">
+          <h3>Os Relatórios são gerados pelo Bebras Experience?</h3>
+          <p><em>Não.</em> Eles são produzidos a partir dos resultados da participação da escola na Olimpíada Bebras.</p>
+        </div>
+      </div>
+      <div class="faq-card q3">
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
+        <div class="faq-body">
+          <h3>A comparação considera todas as escolas brasileiras?</h3>
+          <p>A comparação considera o conjunto nacional de escolas e estudantes participantes da Olimpíada Bebras.</p>
+        </div>
+      </div>
+      <div class="faq-card q4">
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
+        <div class="faq-body">
+          <h3>Os Relatórios substituem as avaliações da escola?</h3>
+          <p><em>Não.</em> Eles complementam as avaliações existentes com uma leitura específica sobre habilidades de Pensamento Computacional.</p>
+        </div>
+      </div>
+      <div class="faq-card q5">
+        <div class="faq-bar"><span class="ico-restore"></span><span class="ico-minimize"></span><span class="ico-close"></span></div>
+        <div class="faq-body">
+          <h3>Os Relatórios apresentam resultados individuais?</h3>
+          <p>O Relatório Geral da Escola apresenta uma visão consolidada dos participantes, organizada por níveis, habilidades, dificuldades e faixas de pontuação.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
