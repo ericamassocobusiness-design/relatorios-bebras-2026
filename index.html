@@ -42,7 +42,15 @@
     line-height: 1.55;
   }
 
-  img { max-width: 100%; display: block; }
+  img {
+    max-width: 100%;
+    display: block;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+  }
 
   .wrap {
     max-width: 1240px;
@@ -291,7 +299,7 @@
 
 <header class="hero">
   <div class="hero-media desktop-only">
-    <img class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
+    <img draggable="false" class="hero-full" src="assets/hero-full.png" alt="Relatórios de Desempenho Bebras 2026. Resultados que viram decisões pedagógicas. Planeje os próximos passos com a ajuda dos Relatórios de Desempenho do Bebras. Inscreva sua escola na Olimpíada Bebras.">
     <a class="hero-cta" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type" aria-label="Inscreva sua escola na Olimpíada Bebras"></a>
   </div>
   <div class="hero-mobile mobile-only">
@@ -304,13 +312,13 @@
       <p class="kicker">TRANSFORME OS RESULTADOS DA<br>OLIMPÍADA BEBRAS EM DECISÕES<br>PEDAGÓGICAS PARA SUA ESCOLA</p>
       <p class="lede">Ao participar do Bebras, sua escola recebe Relatórios de Desempenho que mostram como os estudantes estão desenvolvendo habilidades de Pensamento Computacional e ajudam a equipe a planejar os próximos passos.</p>
       <a class="cta-link" href="https://gestao.upmat.com.br/sign-in?code=Bebras26%20%7C%20type">INSCREVA SUA ESCOLA<br>NA OLIMPÍADA BEBRAS</a>
-      <img class="hero-illustration-mobile" src="assets/hero-illustration.png" alt="Mascote do Bebras apresentando gráficos de acertos por habilidade">
+      <img draggable="false" class="hero-illustration-mobile" src="assets/hero-illustration.png" alt="Mascote do Bebras apresentando gráficos de acertos por habilidade">
     </div>
   </div>
 </header>
 
 <section class="img-section desktop-only" id="mais-que-classificacao">
-  <img class="section-image" src="assets/section-2.png" alt="Muito mais do que uma classificação. O Bebras reúne uma das maiores bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira. Os Relatórios organizam esses dados para revelar pontos fortes, oportunidades de desenvolvimento e diferenças entre níveis e grupos de estudantes. A Olimpíada termina, os dados continuam apoiando a aprendizagem.">
+  <img draggable="false" class="section-image" src="assets/section-2.png" alt="Muito mais do que uma classificação. O Bebras reúne uma das maiores bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira. Os Relatórios organizam esses dados para revelar pontos fortes, oportunidades de desenvolvimento e diferenças entre níveis e grupos de estudantes. A Olimpíada termina, os dados continuam apoiando a aprendizagem.">
 </section>
 <section class="band-teal-mobile mobile-only">
   <div class="wrap">
@@ -318,12 +326,12 @@
     <p>O Bebras reúne <strong>uma das maiores</strong> bases de dados sobre o desempenho em Pensamento Computacional na Educação Básica brasileira.</p>
     <p>Os Relatórios organizam esses dados para <strong>revelar pontos fortes, oportunidades de desenvolvimento</strong> e <strong>diferenças entre níveis e grupos de estudantes</strong>.</p>
     <p class="tagline">A OLIMPÍADA TERMINA.<br>OS DADOS CONTINUAM<br>APOIANDO A APRENDIZAGEM.</p>
-    <img src="assets/classification-mockup.png" alt="Mascote do Bebras segurando um cubo mágico ao lado de prints do Relatório de desempenho da escola">
+    <img draggable="false" src="assets/classification-mockup.png" alt="Mascote do Bebras segurando um cubo mágico ao lado de prints do Relatório de desempenho da escola">
   </div>
 </section>
 
 <section class="img-section desktop-only" id="o-que-mostra">
-  <img class="section-image" src="assets/section-3.png" alt="O que os Relatórios de Desempenho mostram? Comparação nacional, desempenho por nível, faixas de pontuação, desempenho por dificuldade. Análise das cinco habilidades: decomposição, abstração, reconhecimento de padrões, pensamento algorítmico e avaliação.">
+  <img draggable="false" class="section-image" src="assets/section-3.png" alt="O que os Relatórios de Desempenho mostram? Comparação nacional, desempenho por nível, faixas de pontuação, desempenho por dificuldade. Análise das cinco habilidades: decomposição, abstração, reconhecimento de padrões, pensamento algorítmico e avaliação.">
 </section>
 <section class="section-mobile mobile-only">
   <div class="wrap">
@@ -376,7 +384,7 @@
 </section>
 
 <section class="img-section desktop-only" id="como-ajuda">
-  <img class="section-image" src="assets/section-4.png" alt="Como os dados podem ajudar sua escola? Coordenação, Direção, Professores e Escola. Dos resultados às ações: informações claras para apoiar toda a equipe escolar.">
+  <img draggable="false" class="section-image" src="assets/section-4.png" alt="Como os dados podem ajudar sua escola? Coordenação, Direção, Professores e Escola. Dos resultados às ações: informações claras para apoiar toda a equipe escolar.">
 </section>
 <section class="section-mobile mobile-only">
   <div class="wrap">
@@ -384,7 +392,7 @@
     <div class="cards-list-mobile">
       <div class="card c-1">
         <div class="card-inner">
-          <img class="card-icon" src="assets/icon-coordenacao.png" alt="" width="40" height="40">
+          <img draggable="false" class="card-icon" src="assets/icon-coordenacao.png" alt="" width="40" height="40">
           <h3>COORDENAÇÃO</h3>
           <ul>
             <li>Planejar ações pedagógicas</li>
@@ -395,7 +403,7 @@
       </div>
       <div class="card c-2">
         <div class="card-inner">
-          <img class="card-icon" src="assets/icon-direcao.png" alt="" width="40" height="40">
+          <img draggable="false" class="card-icon" src="assets/icon-direcao.png" alt="" width="40" height="40">
           <h3>DIREÇÃO</h3>
           <ul>
             <li>Direcionar ações de desenvolvimento</li>
@@ -406,7 +414,7 @@
       </div>
       <div class="card c-3">
         <div class="card-inner">
-          <img class="card-icon" src="assets/icon-professores.png" alt="" width="40" height="40">
+          <img draggable="false" class="card-icon" src="assets/icon-professores.png" alt="" width="40" height="40">
           <h3>PROFESSORES</h3>
           <ul>
             <li>Compreender dificuldades</li>
@@ -417,7 +425,7 @@
       </div>
       <div class="card c-4">
         <div class="card-inner">
-          <img class="card-icon" src="assets/icon-escola.png" alt="" width="40" height="40">
+          <img draggable="false" class="card-icon" src="assets/icon-escola.png" alt="" width="40" height="40">
           <h3>ESCOLA</h3>
           <ul>
             <li>Fortalecer os índices educacionais</li>
@@ -435,7 +443,7 @@
 </section>
 
 <section class="img-section desktop-only" id="mais-informacoes">
-  <img class="section-image" src="assets/section-5.png" alt="Mais informações sem aplicar outra prova. Os indicadores são gerados pela própria participação dos estudantes na Olimpíada Bebras. Os Relatórios não substituem as avaliações da escola. Eles complementam as informações existentes com uma análise específica das habilidades de Pensamento Computacional.">
+  <img draggable="false" class="section-image" src="assets/section-5.png" alt="Mais informações sem aplicar outra prova. Os indicadores são gerados pela própria participação dos estudantes na Olimpíada Bebras. Os Relatórios não substituem as avaliações da escola. Eles complementam as informações existentes com uma análise específica das habilidades de Pensamento Computacional.">
 </section>
 <section class="band-yellow-mobile mobile-only">
   <div class="wrap">
@@ -443,12 +451,12 @@
     <p>Os indicadores são gerados pela própria participação dos estudantes na Olimpíada Bebras.</p>
     <p><strong>Os Relatórios não substituem as avaliações da escola.</strong></p>
     <p>Eles complementam as informações existentes com uma análise específica das habilidades de Pensamento Computacional.</p>
-    <img src="assets/mascot-info.png" alt="Mascote do Bebras vestindo suéter azul">
+    <img draggable="false" src="assets/mascot-info.png" alt="Mascote do Bebras vestindo suéter azul">
   </div>
 </section>
 
 <section class="img-section desktop-only" id="caminho-pratico">
-  <img class="section-image" src="assets/section-6.png" alt="Um caminho prático para começar a implementar a Computação na escola. A Computação na Educação Básica está organizada em três eixos: Mundo Digital, Cultura Digital e Pensamento Computacional. A Olimpíada Bebras atua diretamente no eixo de Pensamento Computacional.">
+  <img draggable="false" class="section-image" src="assets/section-6.png" alt="Um caminho prático para começar a implementar a Computação na escola. A Computação na Educação Básica está organizada em três eixos: Mundo Digital, Cultura Digital e Pensamento Computacional. A Olimpíada Bebras atua diretamente no eixo de Pensamento Computacional.">
 </section>
 <section class="section-mobile practical-mobile mobile-only">
   <div class="wrap">
@@ -456,12 +464,12 @@
     <p>A Computação na Educação Básica está organizada em três eixos: <span class="b-mundo">Mundo Digital</span>, <span class="b-cultura">Cultura Digital</span> e <span class="b-pensamento">Pensamento Computacional</span>.</p>
     <p>A <span class="b-bebras">Olimpíada Bebras</span> atua diretamente no eixo de <strong>Pensamento Computacional</strong>, desenvolvendo habilidades como: avaliação, abstração, decomposição, pensamento algorítmico e reconhecimento de padrões.</p>
     <p>Capacidades que apoiam a compreensão e a aplicação dos demais conhecimentos da Computação.</p>
-    <img src="assets/piechart.png" alt="Diagrama circular com os três eixos da Computação: Mundo Digital, Cultura Digital e Pensamento Computacional">
+    <img draggable="false" src="assets/piechart.png" alt="Diagrama circular com os três eixos da Computação: Mundo Digital, Cultura Digital e Pensamento Computacional">
   </div>
 </section>
 
 <section class="img-section desktop-only" id="duvidas">
-  <img class="section-image" src="assets/section-7.png" alt="Tire suas dúvidas. É necessário aplicar outra avaliação? Não. Os Relatórios são gerados pelo Bebras Experience? Não. A comparação considera todas as escolas brasileiras? Os Relatórios substituem as avaliações da escola? Não. Os Relatórios apresentam resultados individuais?">
+  <img draggable="false" class="section-image" src="assets/section-7.png" alt="Tire suas dúvidas. É necessário aplicar outra avaliação? Não. Os Relatórios são gerados pelo Bebras Experience? Não. A comparação considera todas as escolas brasileiras? Os Relatórios substituem as avaliações da escola? Não. Os Relatórios apresentam resultados individuais?">
 </section>
 <section class="section-mobile mobile-only">
   <div class="wrap">
