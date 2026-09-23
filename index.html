@@ -92,6 +92,14 @@
   .desktop-only { display: block; }
   .mobile-only { display: none; }
 
+  /* imagens no tamanho nativo (1920px) no máximo, centralizadas; as laterais
+     recebem as mesmas cores chapadas das bordas da arte, sem alterar as imagens */
+  @media (min-width: 821px) {
+    .hero { background: linear-gradient(#fff 0 91.6%, var(--teal-bright) 91.6% 100%); }
+  }
+  #mais-que-classificacao { background: var(--teal); }
+  #mais-informacoes { background: var(--yellow); }
+  .hero-media, .img-section.desktop-only .section-image { max-width: 1920px; margin-left: auto; margin-right: auto; }
   .hero-media { position: relative; }
   .hero-full {
     display: block;
